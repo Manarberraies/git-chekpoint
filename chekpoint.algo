@@ -1,0 +1,26 @@
+ALGORITHM chekpoint
+VAR
+    str:STRING
+    voy: INTEGER:=0
+    w: INTEGER:=0
+    i:INTEGER:=0
+BEGIN
+    write("give me string")
+    read(str) // "hello my name is hedi."
+    
+    FOR i FROM 0 TO str.length-1 STEP 1  DO       //i=1 str[i]="e"
+       IF (str[i]=" " or str[i]=".") THEN
+        w:= w+1
+       
+       END_IF
+        IF (str[i] in {"a";"i";"e";"o";"u";"y"}) THEN
+            voy:= voy+1
+           
+            
+        END_IF
+    END_FOR
+
+    write("the number of voywels is:", voy)
+    write("the number of words:", w)
+    write("the length of sentence is:", str.length)
+END
